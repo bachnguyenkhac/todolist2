@@ -1,0 +1,81 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --muted: #94a3b8;
+  --text: #e5e7eb;
+  --primary: #3b82f6;
+  --danger: #ef4444;
+  --ok: #10b981;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 800px at 20% -10%, #172554 0, transparent 60%),
+              radial-gradient(1000px 700px at 120% 0%, #0b3e6f 0, transparent 60%),
+              var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 720px;
+  margin: 48px auto;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(6px);
+}
+
+h1 { margin: 0 0 16px; font-size: 28px; }
+
+.add { display: flex; gap: 8px; }
+.add input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(148,163,184,0.2);
+  background: #0b1220;
+  color: var(--text);
+}
+.add button {
+  padding: 10px 14px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0 8px;
+  color: var(--muted);
+}
+.meta .clear { background: transparent; border: 1px solid rgba(148,163,184,0.2); color: var(--text); padding: 6px 10px; border-radius: 8px; cursor: pointer; }
+
+.list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #0b1220;
+  border: 1px solid rgba(148,163,184,0.12);
+  border-radius: 10px;
+}
+.item { display: flex; align-items: center; gap: 10px; flex: 1; }
+.text { user-select: none; }
+.completed .text { text-decoration: line-through; color: var(--muted); }
+
+.edit-input { flex: 1; padding: 8px 10px; background: #0f172a; border: 1px solid rgba(148,163,184,0.25); border-radius: 8px; color: var(--text); }
+.actions { display: flex; gap: 6px; }
+.actions button { padding: 6px 10px; border: none; border-radius: 8px; cursor: pointer; }
+.actions .danger { background: var(--danger); color: white; }
+
+
